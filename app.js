@@ -6,7 +6,8 @@ const app=express()
 
 app.use('/graphql',graphqlHTTP({
     schema: gqlSchema,
-    rootValue: Resolver
+    rootValue: Resolver,
+    graphiql: true
 }))
 
 app.listen(3000)
